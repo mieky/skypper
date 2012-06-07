@@ -14,15 +14,14 @@
 			"844222": "(hug)"
 		};
 
-	// Extract image data (and create canvas) of the given image
+	// Extract image data of the given image
 	function withImageData(imageSrc, callback) {
 		var img = new Image();
 		img.onload = function() {
 			// Create & append a canvas with its size matching the image
-			canvas = document.createElement('canvas');
+			canvas = document.getElementById('canvas');
 			canvas.width = img.width;
 			canvas.height = img.height;			
-			document.body.appendChild(canvas);
 
 			// Insert image contents into the canvas and call callback with image data
 			ctx = canvas.getContext("2d");
@@ -111,7 +110,8 @@
 				}
 				result = result + "\n";
 			}
-			console.log(result);
+
+			document.getElementById('output').value = result;
 		});		
 	}();
 }());
