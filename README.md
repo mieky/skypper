@@ -3,8 +3,8 @@ skypper
 
 Converts an image into Skype emoticons using the HTML5 Canvas element. Because, well, it's possible.
 
-Input: an image element with data (mario.png!)
-Output: a text block with a lot of Skype emoticons
+- Input: an image element with data (mario.png!)
+- Output: a text block with a lot of Skype emoticons
 
 Creates a one-to-one mapping between each image pixel and the predefined colors,
 so pretty much the only image that currently makes sense is mario.png.
