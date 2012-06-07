@@ -34,9 +34,9 @@
 		var imageData = ctx.getImageData(0, 0, w, h);
 
 		var rows = [];
-		for (var x = 0; x < imageData.width; x++) {
+		for (var y = 0; y < imageData.height; y++) {
 			var row = [];
-			for (var y = 0; y < imageData.height; y++) {
+			for (var x = 0; x < imageData.width; x++) {
 				var index = ((y * (imageData.width * 4)) + (x*4)),
 					r = imageData.data[index],
 					g = imageData.data[index + 1],
@@ -90,7 +90,7 @@
 			}
 		}
 
-		console.log("Nearest color for (" + r + "," + g + "," + b + "): " + nearest);
+		// console.log("Nearest color for (" + r + "," + g + "," + b + "): " + nearest);
 		return nearest;
 	}
 
