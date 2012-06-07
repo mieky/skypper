@@ -57,10 +57,6 @@
 		return rows;
 	}
 
-	function rgbToHex(color) {
-		return ((1 << 24) + (color.r << 16) + (color.g << 8) + color.b).toString(16).substr(1);
-	}
-
 	function hexToRgb(hex) {
 	    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 	    return result ? {
