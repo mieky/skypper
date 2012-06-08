@@ -1,7 +1,7 @@
 /* skypper -- convert images into skype emoticons */
 
 (function() {
-	var colorMap = {			
+	var colorMap = {
 			"000000": "(emo)",
 			"ffffff": "(e)",
 			"ff0000": "(devil)",
@@ -20,7 +20,7 @@
 			// Create & append a canvas with its size matching the image
 			canvas = document.getElementById('canvas');
 			canvas.width = img.width;
-			canvas.height = img.height;			
+			canvas.height = img.height;
 
 			// Insert image contents into the canvas and call callback with image data
 			var ctx = canvas.getContext("2d");
@@ -99,7 +99,7 @@
 
 		withImageData(imageSrc, function(imageData) {
 			var rows = mapToValues(imageData),
-				result = '';
+				result = "\n";
 
 			// Create an output string of the rows and columns
 			for (var row = 0; row < rows.length; row++) {
@@ -110,6 +110,6 @@
 			}
 
 			document.getElementById('output').value = result;
-		});		
+		});
 	}();
 }());
