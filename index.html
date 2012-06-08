@@ -10,8 +10,8 @@
 
 			canvas {
 				border: 1px solid #999;
-				float: left;
-				margin: 0 0 10px 0;
+				width: 15px;
+				height: 15px;
 			}
 
 			textarea {
@@ -20,14 +20,38 @@
 				height: 200px;
 				width: 500px;
 			}
+			
+			#image-url {
+				width: 500px;
+			}
 		</style>
 	</head>
 
 	<body>
 		<h1>skypper</h1>
 		<canvas id="canvas"></canvas>
+
+		<p>
+		NOTE: cross domain images only work with web security turned off. This can be done by starting
+		chrome with the command line option --disable-web-security.
+		</p>
+
+		<form id="inputform">
+		<label for="image-url">Url of image to convert</label><br />
+		<input type="text" id="image-url" />
+		<input type="submit" value="Convert to Skype" />
+		</form>
+		
 		<textarea id="output"></textarea>
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="skypper.js"></script>
+		<script type="text/javascript">
+			$("#inputform").submit(function() {
+				var url = $("#image-url").val();
+				Skypper(url);
+				return false;
+			});
+		</script>
 	</body>
 </html>
