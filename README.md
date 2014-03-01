@@ -26,3 +26,6 @@ tl;dr
 	(e)(hug)(hug)(skype)(skype)(skype)(skype)(skype)(skype)(e)(e)(e)(e)(e)(e)
 	(hug)(hug)(hug)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)
 	(hug)(hug)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)(e)
+
+License: MIT
+
